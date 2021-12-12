@@ -13,7 +13,7 @@ def docker_install(T):
             sb.call("echo 'y' | cp /home/fedora/DSCWOW.TUI/dockercw123.repo /etc/yum.repos.d/", shell=True)
             sleep(1)
             sb.call("echo 'Downloading docker-ce, please wait ...'", shell=True)
-            sb.call('yum install docker-ce --nobest -y', shell=True)
+            sb.getstatusoutput('yum install docker-ce --nobest -y')
 
             sb.call("echo 'Installing docker-ce...'", shell=True)
             sleep(1)
